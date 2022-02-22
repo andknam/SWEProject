@@ -1,0 +1,18 @@
+{% extends "klasapp/base.html" %}
+{% block content %}
+<div class="content-section">
+  <form method="POST">
+    {% csrf_token %}
+    <fieldset class="form-group">
+      <legend>Registration</legend>
+      {{registrationForm.as_p}}
+      <div>
+        <button type="submit">Sign up!</button>
+      </div>
+    </fieldset>
+  </form>
+  <div>
+    <small> Did you mean to <a href="#">sign in</a> instead?</small>
+  </div>
+</div>
+{% endblock content %}
