@@ -1,0 +1,17 @@
+{% comment %} Put all the base stuff here like navbar etc so we can include and
+use on other pages Actually idk how django works with react at all so lmk if
+this is wrong to do {% endcomment %} {% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KLAS APP</title>
+  </head>
+  <body>
+    {% if messages %} 
+        {% for message in messages %}
+            <div>{{message}}</div>
+        {% endfor %} 
+    {% endif %} 
+    {% block content %}{% endblock %}
+  </body>
+</html>
